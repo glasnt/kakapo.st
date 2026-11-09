@@ -8,19 +8,12 @@ THEME = "themes/cid"
 
 TIMEZONE = "Pacific/Auckland"
 
+ARTICLE_ORDER_BY = 'title'
+PAGE_ORDER_BY = 'title'
+
 DEFAULT_LANG = "EN"
 
-# Blogroll
-LINKS = [
-    ("Emojipedia", "https://emojipedia.org/parrot"),
-    ("eBird", "https://ebird.org/species/kakapo2"),
-]
-
-# Social widget
-SOCIAL = [
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
-]
+BIRD_SUGGESTION_URL = "https://github.com/glasnt/kakapo.st/issues/new?template=suggestion.md"
 
 DEFAULT_PAGINATION = False
 

@@ -13,17 +13,13 @@
 
         <article>
             <img class="bird" src="{{ article.image }}" />
-
-            <p>
-                Platform: {{ article.platform }} {{ article.version }}
-            </p>
-            {% if article.category == "unknown" %}This bird is yet to be identified. <a href="#">Offer a suggestion</a>. {%endif%}
+            {% if article.category == "unknown" %}
+                This bird is yet to be identified. <a href="{{BIRD_SUGGESTION_URL}}&title=Suggestion:%20{{article.title}}">Offer a suggestion</a>. 
+            {% else %}
+            This is a <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+            {%endif%}
             {{ article.content }}
         </article>
-
-        <footer>
-            <p>This entry is posted in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.</p>
-        </footer>
 
         {% include "disqus.html" %}
 
