@@ -14,9 +14,9 @@
         <article>
             <img class="bird" src="{{ article.image }}" />
             {% if article.category == "unknown" %}
-                This bird is yet to be identified. <a href="{{BIRD_SUGGESTION_URL}}&title=Suggestion:%20{{article.title}}">Offer a suggestion</a>. 
+                This bird is yet to be identified. <a href="{{BIRD_SUGGESTION_URL}}&title=Suggestion%20for%20{{article.title}}">Offer a suggestion</a>. 
             {% else %}
-            This is a <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+            This is a <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.
             {%endif%}
             {{ article.content }}
         </article>

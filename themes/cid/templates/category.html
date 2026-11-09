@@ -23,10 +23,10 @@
                 <br>
                 This is a {{ title }}.
                 {% if data.wiki_slug %}
-                <br>Wikipedia: <a href="https://en.wikipedia.org/wiki/{{ data.wiki_slug }}">{{title}}</a>
+                Wikipedia: <a href="https://en.wikipedia.org/wiki/{{ data.wiki_slug }}">{{title}}.</a>
                 {% endif %}
                 {% if data.ebird %}
-                <br>eBird: <a href="https://ebird.org/species/{{ data.ebird }}">{{data.ebird|title}}</a>
+                <a href="https://ebird.org/species/{{ data.ebird }}">eBird page</a>.
                 {% endif %}
             {%endif%}
         {% endfor %}
@@ -39,32 +39,11 @@
 
             <article class="post-overview">
                 <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-               
             </article>
 
             {% endfor %}
 
         </div>
-
-        {% if DEFAULT_PAGINATION %}
-        <div class="paginator">
-            {% if articles_page.has_previous() %}
-                {% if articles_page.previous_page_number() == 1 %}
-                    <a href="{{ SITEURL }}/{{ page_name }}.html">&lt;&lt;&lt;</a>
-                {% else %}
-                    <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}.html">
-                        &lt;&lt;&lt;
-                    </a>
-                {% endif %}
-            {% endif %}
-            Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}
-            {% if articles_page.has_next() %}
-                <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">
-                    &gt;&gt;&gt;
-                </a>
-            {% endif %}
-        </div>
-        {% endif %}
 
 
 {% endblock content %}

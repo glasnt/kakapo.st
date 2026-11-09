@@ -134,7 +134,7 @@ body iframe {
 .container .post-list .post-overview {
   margin: 1em;
   position: relative;
-  padding-left: 7em;
+ /* padding-left: 7em;*/
 }
 .container .post-list .post-overview time {
   position: absolute;
