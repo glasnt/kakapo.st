@@ -218,3 +218,6 @@ body iframe {
 .bird { 
     width: 25%
 }
+.bird-list { 
+  margin-left: 30px; 
+}

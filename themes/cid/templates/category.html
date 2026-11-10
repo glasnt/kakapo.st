@@ -3,7 +3,7 @@
 
 {% block content %}
 
-        <h1>Category: {{ category }}. <small class="header-link"><a href="{{ SITEURL }}/categories">All Categories</a></small></h1>
+        <h1>Category: {{ category }}. </h1>
 
 
         <p>
@@ -34,15 +34,16 @@
 
 
         <div class="post-list">
+            Birds in this category: 
 
+            <p>
             {% for article in articles_page.object_list %}
 
-            <article class="post-overview">
-                <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-            </article>
+                <li class="bird-list"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+          
 
             {% endfor %}
-
+            </p>
         </div>
 
 
